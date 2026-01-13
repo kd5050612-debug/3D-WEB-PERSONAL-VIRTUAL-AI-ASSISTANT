@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖3D KRISHNA AI WEB-CHATBOT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<body>
+    <div id="nav">
+        <h3><b>😎CHAT-WITH</b>-ME</h3>
+      <button id="speakBtn">👋 YO ! GUYS I AM KRISHNA</button>
+    </div>
+    <div id="main">
+        <div id="page">
+            <div id="loop">
+                <h1><b> A CHATBOT</b> THAT TALKS LIKE ME<b><i> -</i></b> <span> NOT</span> LIKE A<span><i> MACHINE</i></span></h1>
+                  <h1><b> A CHATBOT</b> THAT TALKS LIKE ME<b><i> -</i></b> <span> NOT</span> LIKE A<span><i> MACHINE</i></span></h1>
+                      <h1><b> A CHATBOT</b> THAT TALKS LIKE ME<b><i> -</i></b> <span> NOT</span> LIKE A<span><i> MACHINE</i></span></h1>
+            </div>
+           <h3 class="neural-text">
+  AN INTELLIGENT CONVERSATIONAL EXPERIENCE DESIGNED TO REFLECT MY PERSONALITY, THINKING STYLE, AND REAL WORLD COMMUNICATION <br>
+  <span>— SO USERS FEEL THEY'RE CHATTING WITH AN ACTUAL HUMAN, NOT AUTOMATED SOFTWARE</span> <br>
+  <span>BUILT TO LISTEN, RESPOND NATURALLY, AND CREATE MEANINGFUL CONVERSATIONS IN REAL TIME</span>
+</h3>
+           
+          <canvas id="bg-canvas"></canvas>
+        </div>
+        <div id="page1">
+            <div id="right-text">
+                <h3> HUMAN-LIKE CONVERSATIONS POWERED BY INTELLIGENCE</h3>
+                <h1>HAVE FUN
+                    <br>
+                    LET'S PLAY
+                    <br>
+                    JUST BE TOGETHER</h1>
+            </div>
+            <div id="left-text">
+  <h5 class="scramble-text">
+    THIS CHATBOT UNDERSTANDS CONTEXT, TONE, AND INTENT, DELIVERING RESPONSES THAT FEEL NATURAL
+    <br>THOUGHTFUL, AND EMOTIOONALLY AWARE RATHER THAN SCRIPTED OR ROBOTIC
+  </h5>
+</div>
+
+        </div>
+        <div id="page2">
+            <div id="text1">
+                <h3>More-Than a Bot -  A Digital Version of me</h3>
+                <h1>LET'S
+                    <br>
+                    HAVE FUN
+                    <br>
+                    TOGETHER</h1>
+            </div>
+            <div id="text2">
+                <p> DESIGNED TO REPRESENT HOW I THINK, SPEAK, AND HELP, <br> THIS CHATBOT CAN HOLD MEANINGFUL CONVERSATIONS <br> ANSWER, QUESTIONS AND GUIDE USERS, AND INTERACT JUST LIKE I WOULD <br> PERSONAL INTERACTION AND ENGAGEMENT<br> </p>
+            </div>
+        </div>
+        <div id="page3">
+            <div id="text3">
+                <h3>START A CONVERSATION THAT FEELS REAL</h3>
+                <h1>
+
+NO COMMANDS NO SCRIPT
+<br>
+JUST NATURAL CONVERSATION-
+<br>
+THE WAY HUMAN COMMUNICATE
+                </h1>
+               
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+   <script>
+    const text = "Yo guys! I am Krishna. Welcome to chat with me.";
+
+    function speakText() {
+        const speech = new SpeechSynthesisUtterance(text);
+
+        speech.lang = "en-IN";
+        speech.rate = 1;
+        speech.pitch = 0.1;
+        speech.volume = 2;
+
+        const voices = window.speechSynthesis.getVoices();
+
+        const maleVoice =
+            voices.find(v => v.name.toLowerCase().includes("male")) ||
+            voices.find(v => v.name.toLowerCase().includes("google")) ||
+            voices.find(v => v.lang === "en-IN") ||
+            voices.find(v => v.lang === "en-US");
+
+        if (maleVoice) {
+            speech.voice = maleVoice;
+        }
+
+        window.speechSynthesis.cancel(); 
+        window.speechSynthesis.speak(speech);
+    }
+
+    window.speechSynthesis.onvoiceschanged = () => {
+        speakText();
+    };
+    document.getElementById("speakBtn").addEventListener("click", speakText);
+</script>
+<script>
+    const bgMusic = document.getElementById("bgMusic");
+
+    document.addEventListener("click", () => {
+        bgMusic.muted = false;
+        bgMusic.volume = 0.25;
+    }, { once: true });
+</script>
+<div class="chatbot-container">
+    <div class="chatbot-button" id="chatbotButton">
+        <img src="aaaaaaaaaaaa.png" alt="Krishna Avatar" id="chatbotAvatar" />
+    </div>
+    
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <img src="aaaaaaaaaaaa.png" alt="Krishna" class="chatbot-avatar" id="headerAvatar" />
+            <div class="chatbot-header-info">
+                <h3>Krishna</h3>
+                <p>Online • Usually replies instantly</p>
+            </div>
+            <button class="chatbot-close" id="chatbotClose">×</button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot">
+                <img src="aaaaaaaaaaaa.png" alt="Krishna" class="message-avatar" />
+                <div class="message-content">
+                    Hey! 👋 I'm Krishna. Let's chat! What's on your mind?
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-input-area">
+            <input 
+                type="text" 
+                class="chatbot-input" 
+                id="chatbotInput" 
+                placeholder="Type a message..."
+                autocomplete="off"
+            />
+            <button class="chatbot-send" id="chatbotSend">➤</button>
+        </div>
+    </div>
+</div>
+
+<script src="chatbot.js"></script>
+<script src="text-scramble.js"></script>
+
+</body>
+</html>
