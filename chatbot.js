@@ -10,16 +10,16 @@ const chatbotSend = document.getElementById('chatbotSend');
 const avatarSrc = document.getElementById('chatbotAvatar')?.src || 'aaaaaaaaaaaa.png';
 
 const krishnaProfile = {
-    introduction: "Krishna is a passionate software developer and tech enthusiast with expertise in modern web technologies and software engineering. He's dedicated to creating innovative solutions and continuously learning new technologies.",
+    introduction: "Krishna is a passionate software developer and tech enthusiast with expertise in modern web technologies and software engineering. He's dedicated to creating innovative solutions and continuously learning new technologies.He has completed his mactrices from Yashoda Public School,Satara.High school from Dr Kadam Gurukul Indapur and Pursuing the Btech degree from MIT ADT Loni kalbhor Pune.",
     
     skills: [
         "Programming Languages: JavaScript, Python, Java, TypeScript",
-        "Frontend: React, Vue.js, HTML5, CSS3, Tailwind CSS",
-        "Backend: Node.js, Express, RESTful APIs",
-        "Databases: MongoDB, PostgreSQL, MySQL",
-        "Tools & Technologies: Git, Docker, AWS, CI/CD",
+        "Frontend: React, HTML5, CSS3, Tailwind CSS",
+        "Backend: Node.js, Express, RESTful APIs,Java",
+        "Databases: MongoDB, MySQL",
+        "Tools & Technologies: Git, Docker",
         "Frameworks: Next.js, React Native",
-        "Other: WebSocket, GraphQL, Microservices Architecture"
+        "Other: WebSocket, AgenticAI"
     ],
     
     projects: [
@@ -27,10 +27,11 @@ const krishnaProfile = {
         "Built scalable backend systems and APIs",
         "Created 3D interactive portfolios and immersive experiences",
         "Implemented real-time communication features using WebSockets",
-        "Designed and developed full-stack applications"
+        "Designed and developed full-stack applications-AI RESUME ANALYZER https://krishnaairesumeanalyzer.netlify.app/"
+        
     ],
     
-    experience: "Krishna has experience working on various software development projects, focusing on creating user-friendly applications and robust technical solutions. He's worked on both frontend and backend development, demonstrating versatility in full-stack development.",
+    experience: "Krishna has experience working on various software development projects, focusing on creating user-friendly applications and robust technical solutions. He's worked on both frontend and backend development, demonstrating versatility in full-stack development.Completed His internship as Frontend Developer-@Codexintern,Java Development-@Codec Technologies,Web development-@Infotact Solution and SDE Intern-@Bluestock Fintech",
     
     education: "Krishna has a strong educational background in computer science and software engineering, with continuous learning through certifications and hands-on project experience.",
     
@@ -42,7 +43,7 @@ const krishnaProfile = {
         "Continuously expanding technical expertise"
     ],
     
-    contact: "You can connect with Krishna through his professional profiles, email, or social media links available on this website. Feel free to reach out for collaboration opportunities or inquiries about his work."
+    contact: "You can connect with Krishna through his professional profiles linkedin - https://www.linkedin.com/in/krishna-das-194155349, email - kri123sh45na@gmail.com, or Instagram - https://www.instagram.com/anime_fantasy_07?igsh=a2kxa3A2dHJ4eHE1. Feel free to reach out for collaboration opportunities or inquiries about his work."
 };
 
 const responses = {
